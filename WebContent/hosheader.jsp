@@ -17,14 +17,30 @@
 <style >
 #banner{
 height:100px;
-background-color:#AA1923;
+
+background-color:grey;
+}
+
+#nestdiv {
+top:0px;
+left:0px;
+position:absolute;
+height:100px;
+width:30%;
+z-index:1
 }
 </style>
 <body>
 <div id="banner">
-<!-- <marquee behavior="alternate" direction="right">
-<img src="images/vvv.jpg">
-</marquee>	-->
+  
+
+</div>
+<div id="nestdiv">
+
+<marquee behavior="alternate" direction="right">
+<img  src="images/vvv.jpg">
+</marquee>
+
 </div>
 
 <nav class="navbar navbar-inverse">

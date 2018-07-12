@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <servlet>
     <servlet-name>Userregister</servlet-name>
-    <servlet-class>controllers.Userregister</servlet-class>
+    <servlet-class>servlets.Userregister</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userregister</servlet-name>
@@ -10,7 +10,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Hosregister</servlet-name>
-    <servlet-class>controllers.Hosregister</servlet-class>
+    <servlet-class>servlets.Hosregister</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hosregister</servlet-name>
@@ -18,7 +18,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userlogin</servlet-name>
-    <servlet-class>controllers.Userlogin</servlet-class>
+    <servlet-class>servlets.Userlogin</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userlogin</servlet-name>
@@ -26,7 +26,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Hoslogin</servlet-name>
-    <servlet-class>controllers.Hoslogin</servlet-class>
+    <servlet-class>servlets.Hoslogin</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hoslogin</servlet-name>
@@ -34,7 +34,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>AddBlood</servlet-name>
-    <servlet-class>controllers.AddBlood</servlet-class>
+    <servlet-class>servlets.AddBlood</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddBlood</servlet-name>
@@ -42,7 +42,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Bloodtable</servlet-name>
-    <servlet-class>controllers.Bloodtable</servlet-class>
+    <servlet-class>servlets.Bloodtable</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Bloodtable</servlet-name>
@@ -50,7 +50,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>RemoveBlood</servlet-name>
-    <servlet-class>controllers.RemoveBlood</servlet-class>
+    <servlet-class>servlets.RemoveBlood</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RemoveBlood</servlet-name>
@@ -58,7 +58,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Gethospitals</servlet-name>
-    <servlet-class>controllers.Gethospitals</servlet-class>
+    <servlet-class>servlets.Gethospitals</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Gethospitals</servlet-name>
@@ -66,7 +66,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Bloodlisthos</servlet-name>
-    <servlet-class>controllers.Bloodlisthos</servlet-class>
+    <servlet-class>servlets.Bloodlisthos</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Bloodlisthos</servlet-name>
@@ -74,7 +74,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Logout</servlet-name>
-    <servlet-class>controllers.Logout</servlet-class>
+    <servlet-class>servlets.Logout</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Logout</servlet-name>
@@ -82,7 +82,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userprofiledetail</servlet-name>
-    <servlet-class>controllers.Userprofiledetail</servlet-class>
+    <servlet-class>servlets.Userprofiledetail</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userprofiledetail</servlet-name>
@@ -90,7 +90,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Hosprofiledetail</servlet-name>
-    <servlet-class>controllers.Hosprofiledetail</servlet-class>
+    <servlet-class>servlets.Hosprofiledetail</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hosprofiledetail</servlet-name>
@@ -98,7 +98,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userpasschange</servlet-name>
-    <servlet-class>controllers.Userpasschange</servlet-class>
+    <servlet-class>servlets.Userpasschange</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userpasschange</servlet-name>
@@ -106,7 +106,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Hospasschange</servlet-name>
-    <servlet-class>controllers.Hospasschange</servlet-class>
+    <servlet-class>servlets.Hospasschange</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hospasschange</servlet-name>
@@ -114,7 +114,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userreqhandler</servlet-name>
-    <servlet-class>controllers.Userreqhandler</servlet-class>
+    <servlet-class>servlets.Userreqhandler</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userreqhandler</servlet-name>
@@ -122,7 +122,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userbloodreq</servlet-name>
-    <servlet-class>controllers.Userbloodreq</servlet-class>
+    <servlet-class>servlets.Userbloodreq</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userbloodreq</servlet-name>
@@ -130,7 +130,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Useracceptreq</servlet-name>
-    <servlet-class>controllers.Useracceptreq</servlet-class>
+    <servlet-class>servlets.Useracceptreq</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Useracceptreq</servlet-name>
@@ -138,7 +138,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Userverpass</servlet-name>
-    <servlet-class>controllers.Userverpass</servlet-class>
+    <servlet-class>servlets.Userverpass</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userverpass</servlet-name>
@@ -146,7 +146,7 @@
   </servlet-mapping>
     <servlet>
     <servlet-name>Userverotp</servlet-name>
-    <servlet-class>controllers.Userverotp</servlet-class>
+    <servlet-class>servlets.Userverotp</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userverotp</servlet-name>
@@ -154,10 +154,18 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>Usernewchanged</servlet-name>
-    <servlet-class>controllers.Usernewchanged</servlet-class>
+    <servlet-class>servlets.Usernewchanged</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Usernewchanged</servlet-name>
     <url-pattern>/Usernewchanged</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Userrejectreq</servlet-name>
+    <servlet-class>servlets.Userrejectreq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Userrejectreq</servlet-name>
+    <url-pattern>/Userrejectreq</url-pattern>
   </servlet-mapping>
 </web-app>

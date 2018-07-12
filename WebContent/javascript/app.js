@@ -16,7 +16,7 @@ particlesJS('banner',
   {
     "particles": {
       "number": {
-        "value": 250,
+        "value": 50,
         "density": {
           "enable": true,
           "value_area": 800

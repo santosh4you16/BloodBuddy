@@ -35,7 +35,7 @@ function addVal(){
 <center><h4>Welcome <%=session.getAttribute("SessName") %>
  - Welcome to The Blood Portal</h4></center>	
 </div>
-<div class="well">
+<div class="container">
 	<form action="AddBlood" onsubmit="return addVal()" method="get">
 			
 	
@@ -62,7 +62,8 @@ function addVal(){
 		<button type="submit" class="btn btn-success">Add</button>
 	</form>
 </div>
-<div class="well">
+<div class="container">
+<hr>
 <a href="Bloodtable" class="btn btn-danger">View Blood Records</a>
 </div>
 

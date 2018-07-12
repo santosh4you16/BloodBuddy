@@ -48,7 +48,7 @@ function addVal(){
 	</thead>
 	<tbody>
 	<tr>
-		<jsp:useBean id="pojo" class="model.BloodPojo" scope="session"></jsp:useBean>
+		<jsp:useBean id="pojo" class="beans.BloodPojo" scope="session"></jsp:useBean>
 		<td><jsp:getProperty name="pojo" property="aneg"></jsp:getProperty></td>
 		<td><jsp:getProperty name="pojo" property="bneg"></jsp:getProperty></td>
 		<td><jsp:getProperty name="pojo" property="oneg"></jsp:getProperty></td>

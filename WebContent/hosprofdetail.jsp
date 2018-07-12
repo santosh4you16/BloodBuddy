@@ -22,7 +22,7 @@
 <center><h3>(<%=session.getAttribute("SessName") %>) Details:-</h3></center>
 </div>
 <div class="well">
-<jsp:useBean id="hsptl" class="model.HospitalPojo" scope="session"></jsp:useBean>
+<jsp:useBean id="hsptl" class="beans.HospitalPojo" scope="session"></jsp:useBean>
 	<ul class="list-group">
 	<li class="list-group-item"><h4>Hospital_ID  : </h4><jsp:getProperty name="hsptl" property="hospitalId"></jsp:getProperty></li>
 	<li class="list-group-item"><h4>Hospital Name: </h4><jsp:getProperty name="hsptl" property="hospitalName"></jsp:getProperty></li>

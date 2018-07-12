@@ -12,7 +12,7 @@
 <%@ include file="header.jsp" %>
 <script  src="javascript/registeropt.js"></script>
 <body id="slider">
-<div class="well">
+<div class="container">
 <button class="btn btn-success btn-block" data-toggle="modal" data-target="#mdl1">Log In</button>
 <div class="modal fade" id="mdl1">
 	<div class="modal-dialog">
@@ -34,7 +34,7 @@
 </div>
 
 </div>
-<div class="well">
+<div class="container">
 	<div id="myslider" class="carousel slide" data-ride="carousel">
 	
 		<ol class="carousel-indicators">
@@ -45,10 +45,11 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="images/b1.jpg" width="100%">
+				<a href="register.jsp"><img src="images/b4.jpg" width="100%"></a>
 				<div class="carousel-caption">
-				Picture 1
+				Click to Register
 				</div>
+				
 			</div>
 			<div class="item">
 				<img src="images/banner.jpg" width="100%">
@@ -63,9 +64,9 @@
 				</div>
 			</div>
 			<div class="item">
-				<a href="register.jsp"><img src="images/b4.jpg" width="100%"></a>
+				<img src="images/b1.jpg" width="100%">
 				<div class="carousel-caption">
-				Click to Register
+				Picture 1
 				</div>
 			</div>
 		</div>
@@ -78,8 +79,9 @@
 	</div>
 </div>
 
-<div class="well">
+<div class="container">
 <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdl">SignUp</button>
+</div>
 <div class="modal fade" id="mdl">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -98,7 +100,7 @@
 	</div>
 
 </div>
-</div>
+
 </body>
 <%@ include file="footer.jsp" %>
 </html>

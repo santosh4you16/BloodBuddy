@@ -22,8 +22,8 @@
 <div class="well">
 <center><h3>(<%=session.getAttribute("SessName") %>) Details:-</h3></center>
 </div>
-<div class="well">
-		<jsp:useBean id="upj" class="model.Userpojo" scope="session"></jsp:useBean>
+<div class="container">
+		<jsp:useBean id="upj" class="beans.Userpojo" scope="session"></jsp:useBean>
 		<ul class="list-group">
 		<li class="list-group-item"><h4>UserID   : </h4><jsp:getProperty name="upj" property="uid"></jsp:getProperty></li>
 		<li class="list-group-item"><h4>Name     : </h4><jsp:getProperty name="upj" property="uname"></jsp:getProperty></li>

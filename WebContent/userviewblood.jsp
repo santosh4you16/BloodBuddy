@@ -23,7 +23,7 @@
 <div class="well">
 <center><h3>Blood Record (<%= session.getAttribute("SessName")%>)</h3></center>
 </div>
-<div class="well">
+<div class="container">
 
 	<table class="table table-striped">
 	<thead>
@@ -40,7 +40,7 @@
 	</thead>
 	<tbody>
 	<tr>
-		<jsp:useBean id="pojo" class="model.BloodPojo" scope="session"></jsp:useBean>
+		<jsp:useBean id="pojo" class="beans.BloodPojo" scope="session"></jsp:useBean>
 		<td><jsp:getProperty name="pojo" property="aneg"></jsp:getProperty></td>
 		<td><jsp:getProperty name="pojo" property="bneg"></jsp:getProperty></td>
 		<td><jsp:getProperty name="pojo" property="oneg"></jsp:getProperty></td>
@@ -58,7 +58,8 @@
 	</table>
 
 </div>
-<div class="well">
+<hr>
+<div class="container">
 <a href="userhoslist.jsp" class="btn btn-primary">Go Back</a>
 </div>
 

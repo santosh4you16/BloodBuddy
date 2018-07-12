@@ -17,14 +17,32 @@
 <style >
 #banner{
 height:100px;
-background-color:#AA1923;
+
+background-color:grey;
+}
+
+#nestdiv {
+top:0px;
+left:0px;
+position:absolute;
+height:100px;
+width:30%;
+z-index:1
 }
 </style>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Iterator" %>
 <body>
+<body>
 <div id="banner">
+  
 
+</div>
+<div id="nestdiv">
+
+<marquee behavior="alternate" direction="right">
+<img  src="images/vvv.jpg">
+</marquee>
 
 </div>
 <form action="userreqhandle.jsp">

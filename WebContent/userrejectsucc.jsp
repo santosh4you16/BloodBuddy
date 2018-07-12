@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hospital list </title>
-</head>
+<title>Successfully Registered!</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- Latest compiled and minified CSS -->
@@ -16,36 +15,20 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="CSS/style.css"/>
 <%@ include file="userheader.jsp" %>
-<%@ page import="java.sql.*" %>
 
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Iterator"  %>
+</head>
 <body>
-<div class="well">
-<center><h3>User (<%= session.getAttribute("SessName") %>) Listing Hospitals in <%= session.getAttribute("city") %></h3></center>
-</div>
-<div class="container">
-	
-	
-	<form action="Bloodlisthos">
-			<%	ArrayList al1=(ArrayList)session.getAttribute("hslist");
-				out.println("<h3>HOSPITALS<h3><hr>");
-				Iterator itr=al1.iterator();
-				out.println("<ul class=\"list-group\">");
-				while(itr.hasNext()){
-				String hsname=(String)itr.next();
-				
-				out.println("<li class=\"list-group-item\"><button type=\"submit\" class=\"btn btn-link\" name=\"btnhos\" value=\""+hsname+"\">"+hsname+"</button></li>");
-				
-				}
-				out.println("</ul>");
-			%>
-	</form>
-	
-	
-</div>
+<div id="#prono" class="well" >
+<center><h4>Request Rejected ! <%=(String)session.getAttribute("reciever")%> !</h4></center>
+			
+<center>
+<a href="userprofile.jsp" class="btn btn-success">Go Back</a>
 
+</center>
+
+</div>
 </body>
 <%@ include file="footer.jsp" %>
 </html>

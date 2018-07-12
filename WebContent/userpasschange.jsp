@@ -21,7 +21,7 @@
 </div>
 <body>
 <hr>
-	<div id="wid" class="well">
+	<div id="wid" class="container">
 	<fieldset>
 	<legend>Chnage Password</legend>
 	<form action="Userpasschange" onsubmit="return validateForm()" method="get">
