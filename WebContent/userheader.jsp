@@ -34,17 +34,15 @@ z-index:1
 <%@ page import="java.util.Iterator" %>
 <body>
 <body>
-<div id="banner">
-  
-
-</div>
-<div id="nestdiv">
-
-<marquee behavior="alternate" direction="right">
-<img  src="images/vvv.jpg">
-</marquee>
-
-</div>
+	<div id="banner">
+	</div>
+	<div id="nestdiv">
+	
+		<marquee behavior="alternate" direction="right">
+			<img  src="images/vvv.jpg">
+		</marquee>
+	
+	</div>
 <form action="userreqhandle.jsp">
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">

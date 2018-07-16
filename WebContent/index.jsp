@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="item">
-				<img src="images/frnds.jpg" width="100%">
+				<img src="images/consult.jpg" width="100%">
 				<div class="carousel-caption">
 				Picture 3
 				</div>

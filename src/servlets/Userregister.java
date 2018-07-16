@@ -47,6 +47,9 @@ public class Userregister extends HttpServlet {
 		stm1.setString(1, name);
 		stm1.setString(2,bg);
 		stm1.executeUpdate();
+		PreparedStatement stm2=conn.prepareStatement("insert into user_buy_blood(username) values(?)");
+		stm2.setString(1, name);
+		stm2.executeUpdate();
 		HttpSession sess=request.getSession();
 		sess.setAttribute("id", name);
 		response.sendRedirect("registersuccess.jsp");

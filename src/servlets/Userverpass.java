@@ -27,7 +27,7 @@ public class Userverpass extends HttpServlet {
 			 name=rs.getString("name");
 			 mail=rs.getString("email");
 		 }
-		 if(nm.equals(name) || nm==null) {
+		 if(nm.equals(name)) {
 			 String otp=new String(GenOtp.genOtp());
 			 HttpSession sess=request.getSession();
 			 OtpMail.send(mail, otp);

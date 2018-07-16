@@ -144,7 +144,7 @@
     <servlet-name>Userverpass</servlet-name>
     <url-pattern>/Userverpass</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>Userverotp</servlet-name>
     <servlet-class>servlets.Userverotp</servlet-class>
   </servlet>
@@ -160,12 +160,20 @@
     <servlet-name>Usernewchanged</servlet-name>
     <url-pattern>/Usernewchanged</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>Userrejectreq</servlet-name>
     <servlet-class>servlets.Userrejectreq</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Userrejectreq</servlet-name>
     <url-pattern>/Userrejectreq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserBuyblood</servlet-name>
+    <servlet-class>servlets.UserBuyblood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserBuyblood</servlet-name>
+    <url-pattern>/UserBuyblood</url-pattern>
   </servlet-mapping>
 </web-app>

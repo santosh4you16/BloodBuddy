@@ -24,7 +24,7 @@ public class Usernewchanged extends HttpServlet {
 			stm.setString(1, pass);
 			stm.setString(2,hid);
 			stm.execute();
-			response.sendRedirect("uupdatesuccess.jsp");
+			response.sendRedirect("userpchangeoutside.jsp");
 		}catch(Exception e) {
 			System.out.println(e);
 		}

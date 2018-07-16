@@ -19,8 +19,10 @@ import beans.BloodPojo;
 public class Bloodlisthos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
+			HttpSession session=request.getSession();
 			String btnhos=(String)request.getParameter("btnhos");
 			System.out.println(btnhos);
+			session.setAttribute("hosname", btnhos);
 			String query="Select a_neg,b_neg,o_neg,ab_neg,ab_pos,a_pos,b_pos,o_pos from blood where hos_name='"+btnhos+"'";
 			Connection c=ConnectionProvider.connect();
 			Statement stmt=c.createStatement();
@@ -43,7 +45,7 @@ public class Bloodlisthos extends HttpServlet {
 				bj.setApos(apos);
 				bj.setBpos(bpos);
 				bj.setOpos(opos);
-				HttpSession session=request.getSession();
+				
 				session.setAttribute("pojo",bj);
 				response.sendRedirect("userviewblood.jsp");
 			}
