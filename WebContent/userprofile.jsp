@@ -17,6 +17,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <%@ include file="userheader.jsp" %>
+<script type="text/javascript">
+function val(){
+var state=document.getElementById('state');
+if(state.value==null || state.value==""){
+	alert("Please enter state first");
+	state.style.borderColor="red";
+	return false;
+}
+}
+</script>
 </head>
 <body>
 <div class="well">
@@ -39,10 +49,11 @@
 		<div id="collapse1" class="panel-collapse collapse in">
 			<div class="panel-body">
 			
-				<form action="Gethospitals">
+				<form action="Gethospitals" onsubmit="return val()">
 					<div class="form-group">
 					<label for="State">Select State:</label>
 					<select class="form-control" id="state" name="state">
+						<option value="">-----Select an option-----</option>
 						<option value="Assam">Assam</option>
 						<option value="Bihar">Bihar</option>
 						<option value="Chandigarh">Chandigarh</option>

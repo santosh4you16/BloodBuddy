@@ -38,11 +38,10 @@ public class Useracceptreq extends HttpServlet {
 				 rmail=rs1.getString("email");
 			}
 			SendMail.send(smail,rmail,phn);
-			stmt.executeUpdate("update user_request set got_req=\'null\' where username='"+rhid+"'");
+			stmt.executeUpdate("update user_request set requested=\'null\' where username='"+rhid+"'");
 			ArrayList al=(ArrayList)session.getAttribute("Requests");
 			
 				al.remove(rhid);
-			
 			
 			response.sendRedirect("useracceptsucc.jsp");
 		}catch(Exception e) {

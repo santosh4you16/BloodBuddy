@@ -33,7 +33,7 @@ public class Userlogin extends HttpServlet {
 	   				f=1;
 	   				HttpSession session=request.getSession();
 	   				session.setAttribute("SessName",name);
-	   				ResultSet rs1=stmt.executeQuery("select * from user_request where got_req=\'got\' AND bloodg='"+bg+"'");
+	   				ResultSet rs1=stmt.executeQuery("select * from user_request where requested=\'req\' AND bloodg='"+bg+"'");
 	   				while(rs1.next()) {
 	   					String uname=rs1.getString("username");
 	   					al.add(uname);

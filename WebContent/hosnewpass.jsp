@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>BloodBuddy:login</title>
+<title>Change Password!</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -13,33 +13,34 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascript/user_reg_val.js"></script>
+<link rel="stylesheet" href="CSS/style.css"/>
 <%@ include file="header.jsp" %>
 </head>
-<link rel="stylesheet" href="CSS/style.css"/>
-<body>
-<div id="prono">
-	<hr>
-	
+	<div id="prono">
 	<div id="wid" class="well">
 	<fieldset>
-	<legend>Login (HOSPITAL)</legend>
-	<form action="Hoslogin" method="post">
+	<legend>Change Password</legend>
+	<form action="Hosnewchanged" onsubmit="return validateForm()" method="get">
+	
 		<div class="form-group">
-		<label for="username">Username:</label>
-		<input type="text" placeholder="Enter username" class="form-control" id="username" name="hid">
-		</div>
-		<div class="form-group">
-		<label for="pwd">Password:</label>
+		<label for="pwd">Edit Password:</label>
 		<input type="password" placeholder="Enter Password" class="form-control" id="pwd" name="pwd">
 		</div>
-		<input type="submit" class="btn btn-danger btn-block" value="Login"></input>
-		<a href="hosforgpass.jsp" class="btn btn-link btn-block">Forgot Password?</a>
+		
+		<div class="form-group">
+		<label for="pwd1">Re-enter Password:</label>
+		<input type="password" placeholder="Re-enter Password" class="form-control" id="pwd1" name="pwd1">
+		</div>
+		
+		
+		<input type="submit" class="btn btn-warning btn-block" value="Save"></input>
+		
 		
 	</form>
 	</fieldset>
 </div>
-<hr>
 </div>
-</body>
 <%@ include file="footer.jsp" %>
+</body>
 </html>

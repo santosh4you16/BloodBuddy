@@ -33,6 +33,7 @@ public class Userregister extends HttpServlet {
 	String state=request.getParameter("state");
 	try{
 		Connection conn=ConnectionProvider.connect();
+		conn.setAutoCommit(false);
 		PreparedStatement stm=conn.prepareStatement("insert into users values(?,?,?,?,?,?,?,sequser.nextval,?)");
 		stm.setString(1,name);
 		stm.setString(2,dateob);
@@ -50,6 +51,7 @@ public class Userregister extends HttpServlet {
 		PreparedStatement stm2=conn.prepareStatement("insert into user_buy_blood(username) values(?)");
 		stm2.setString(1, name);
 		stm2.executeUpdate();
+		conn.commit();
 		HttpSession sess=request.getSession();
 		sess.setAttribute("id", name);
 		response.sendRedirect("registersuccess.jsp");

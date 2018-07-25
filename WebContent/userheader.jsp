@@ -49,7 +49,7 @@ z-index:1
 	
 	<!-- Logo -->
 	<div class="navbar-header">
-		<a href="userprofile.jsp" class="navbar-brand"><%=((String)session.getAttribute("SessName")).toUpperCase() %></a>
+		<a href="Userbloodrequpdate" class="navbar-brand"><%=((String)session.getAttribute("SessName")).toUpperCase() %></a>
 	</div>
 	
 	<!-- menu items -->
@@ -57,7 +57,7 @@ z-index:1
 	<div>
 		<ul class="nav navbar-nav">
 			<li><a href="Userprofiledetail">MyProfile</a></li>
-			
+			<li><a href="Userpurhistory">Purchase-History</a></li>
 			<!-- drop down menu -->
 			<%
 				ArrayList al=(ArrayList)session.getAttribute("Requests");

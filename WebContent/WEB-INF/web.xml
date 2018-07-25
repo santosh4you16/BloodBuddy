@@ -176,4 +176,44 @@
     <servlet-name>UserBuyblood</servlet-name>
     <url-pattern>/UserBuyblood</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Userbloodrequpdate</servlet-name>
+    <servlet-class>servlets.Userbloodrequpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Userbloodrequpdate</servlet-name>
+    <url-pattern>/Userbloodrequpdate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Hosverpass</servlet-name>
+    <servlet-class>servlets.Hosverpass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hosverpass</servlet-name>
+    <url-pattern>/Hosverpass</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Hosnewchanged</servlet-name>
+    <servlet-class>servlets.Hosnewchanged</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hosnewchanged</servlet-name>
+    <url-pattern>/Hosnewchanged</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Hosverotp</servlet-name>
+    <servlet-class>servlets.Hosverotp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hosverotp</servlet-name>
+    <url-pattern>/Hosverotp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Userpurhistory</servlet-name>
+    <servlet-class>servlets.Userpurhistory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Userpurhistory</servlet-name>
+    <url-pattern>/Userpurhistory</url-pattern>
+  </servlet-mapping>
 </web-app>
