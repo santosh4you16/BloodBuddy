@@ -14,6 +14,8 @@ import utility.SendMail;
 public class Userbloodreq extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
 		try {
 			String bg="";
 			HttpSession session=request.getSession();

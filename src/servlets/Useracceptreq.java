@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -18,7 +19,10 @@ import utility.SendMail;
 public class Useracceptreq extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
 		try {
+			PrintWriter out=response.getWriter();
 			String smail="";
 			String rmail="";
 			String phn="";
@@ -37,13 +41,20 @@ public class Useracceptreq extends HttpServlet {
 			while(rs1.next()) {
 				 rmail=rs1.getString("email");
 			}
-			SendMail.send(smail,rmail,phn);
+			if(SendMail.send(smail,rmail,phn)) {
 			stmt.executeUpdate("update user_request set requested=\'null\' where username='"+rhid+"'");
 			ArrayList al=(ArrayList)session.getAttribute("Requests");
 			
 				al.remove(rhid);
 			
 			response.sendRedirect("useracceptsucc.jsp");
+			}else {
+				out.println("<html>");
+				out.println("<center><h3>couldn't send Mail</h3></center>");
+				out.println("<center><a href=\"userprofile.jsp\">Go Back!</a><center>");
+				out.println("</html>");
+			}
+			
 		}catch(Exception e) {
 			System.out.println(e);
 		}

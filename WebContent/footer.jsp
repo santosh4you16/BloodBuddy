@@ -18,7 +18,7 @@
 <body>
 <hr>
 <div class="well">
-</h1><center><h4>All Rights Reserverd - Santosh<br>© 2018 </h4>
+</h1><center><h4>All Rights Reserverd - Santosh Sah<br>© 2018 </h4>
 <i class="fa fa-facebook-official" style="font-size:36px"></i>&nbsp;&nbsp;
 <i class="fa fa-google-plus" style="font-size:36px"></i>
 </center>

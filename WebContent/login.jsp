@@ -16,6 +16,13 @@
 <%@ include file="header.jsp" %>
 </head>
 <link rel="stylesheet" href="CSS/style.css"/>
+<script type="text/javascript">
+function preBack(){
+	window.history.forward();
+}
+setTimeout("preBack()","0");
+window.onunload=function(){null}
+</script>
 <body>
 	
 	<div id="prono">

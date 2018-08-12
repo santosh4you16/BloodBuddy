@@ -49,14 +49,19 @@ z-index:1
 	
 	<!-- Logo -->
 	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#exp">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
 		<a href="index.jsp" class="navbar-brand">BloodBuddy</a>
 	</div>
 	
 	<!-- menu items -->
 	
-	<div>
+	<div class="collapse navbar-collapse" id="exp">
 		<ul class="nav navbar-nav">
-			<li><a href="#">Products</a></li>
+			
 			
 			<!-- drop down menu -->
 			
@@ -70,8 +75,8 @@ z-index:1
 		</ul>
 		<!-- Right align -->
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Contact Us</a></li>
+			<li><a href="aboutus.jsp">About Us</a></li>
+			<li><a href="contactus.jsp">Contact Us</a></li>
 			
 		</ul>
 	</div>

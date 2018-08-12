@@ -14,11 +14,16 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%@ include file="userheader.jsp" %>
-
+<%@ page errorPage="errorpage.jsp" %>
 </head>
 
 </script>
 <body>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <div class="well">
 <center><h3>(<%=session.getAttribute("SessName") %>) Last Purchase Details:-</h3></center>
 </div>

@@ -5,14 +5,12 @@ import javax.mail.internet.*;
 import javax.activation.*;
  
  
-public class SendMail 
+public class FeedbackMail 
 {
  
-   public static boolean send(String smail,String rmail,String phn ) 
+   public static boolean send(String msg,String name) 
    {    
-	   String senderMail=smail;
-	   String recievermail=rmail;
-	   String phno=phn;
+	   
       
       Properties properties = System.getProperties();
  
@@ -40,11 +38,11 @@ public class SendMail
  
          message.setFrom(new InternetAddress("cse15316.sbit@gmail.com"));
  
-         message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recievermail));
+         message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("sk.santosh99111@gmail.com"));
  
-         message.setSubject("BloodBuddy:Your request is Accepted. ");
+         message.setSubject("Feedback from: "+name);
  
-         message.setText("please find the phone number\nPhone no - "+phno+"\nEmail - "+smail);
+         message.setText(msg);
          Transport.send(message);
          System.out.println("Mail successfully sent");
       }

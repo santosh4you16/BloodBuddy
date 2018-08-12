@@ -15,29 +15,24 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<%@ page errorPage="errorpage.jsp" %>
 <%@ include file="userheader.jsp" %>
-<script type="text/javascript">
-function val(){
-var state=document.getElementById('state');
-if(state.value==null || state.value==""){
-	alert("Please enter state first");
-	state.style.borderColor="red";
-	return false;
-}
-}
-</script>
-</head>
-<body>
-<div class="well">
-<div class="container">
-<center><h3 style="text-shadow:2px 2px 2px grey">Welcome <%=  session.getAttribute("SessName") %>
- - Donate blood and be a hero</h3></center>
- 			
-<a href="Userbloodreq" class="btn btn-warning btn-block">Make Request</a>
-</div>
 
+</head>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
+<body>
+<div class="contanier">
+<center><marquee direction="left" behavior="alternate"><h3 style="text-shadow:2px 2px 2px grey">Welcome <%=  session.getAttribute("SessName") %>
+ - Donate blood and be a hero</h3></marquee></center>
 </div>
+<div class="container">
+<a href="#" class="btn btn-danger  btn-block">Donate</a>			
+<a href="Userbloodreq" class="btn btn-warning btn-block">Make Request</a>
+</div><br><br>
 
 <div class="container">
 
@@ -96,8 +91,18 @@ if(state.value==null || state.value==""){
 		
 </div>
 
+<script type="text/javascript">
+function val(){
+var state=document.getElementById('state');
+if(state.value==null || state.value==""){
+	alert("Please enter state first");
+	state.style.borderColor="red";
+	return false;
+}
+}
 
 
+</script>
 
 
 

@@ -17,6 +17,8 @@ import beans.Userpurpojo;
 public class Userpurhistory extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
 		try {
 			HttpSession sess=request.getSession();
 			String name=(String)sess.getAttribute("SessName");

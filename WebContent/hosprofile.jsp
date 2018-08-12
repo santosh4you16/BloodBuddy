@@ -16,7 +16,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<%@ page errorPage="errorpage.jsp" %>
 <%@ include file="hosheader.jsp" %>
 <script  >
 function addVal(){
@@ -30,6 +30,11 @@ function addVal(){
 }
 </script>
 </head>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <body>
 <div class="well" >
 <center><h4>Welcome <%=session.getAttribute("SessName") %>

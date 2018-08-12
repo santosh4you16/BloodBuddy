@@ -18,10 +18,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%@ include file="userheader.jsp" %>
 <%@ page import="java.sql.*" %>
-
+<%@ page errorPage="errorpage.jsp" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Iterator"  %>
 <body>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <div class="well">
 <center><h3>User (<%= session.getAttribute("SessName") %>) Listing Hospitals in <%= session.getAttribute("city") %></h3></center>
 </div>
@@ -29,7 +34,8 @@
 	
 	
 	<form action="Bloodlisthos">
-			<%	ArrayList al1=(ArrayList)session.getAttribute("hslist");
+			<%	
+				ArrayList al1=(ArrayList)session.getAttribute("hslist");
 				out.println("<h3>HOSPITALS<h3><hr>");
 				Iterator itr=al1.iterator();
 				out.println("<ul class=\"list-group\">");

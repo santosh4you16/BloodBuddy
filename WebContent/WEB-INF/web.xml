@@ -216,4 +216,12 @@
     <servlet-name>Userpurhistory</servlet-name>
     <url-pattern>/Userpurhistory</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Contactus</servlet-name>
+    <servlet-class>servlets.Contactus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Contactus</servlet-name>
+    <url-pattern>/Contactus</url-pattern>
+  </servlet-mapping>
 </web-app>

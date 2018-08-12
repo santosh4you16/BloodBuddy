@@ -17,6 +17,8 @@ public class Userlogin extends HttpServlet {
    
    	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
 		String name=request.getParameter("uname");
 	   	String pwd=request.getParameter("pwd");
 	   	try {

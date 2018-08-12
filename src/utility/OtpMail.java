@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 
 public class OtpMail {
 
-	   public static void send(String smail,String otp ) 
+	   public static boolean send(String smail,String otp ) 
 	   {    
 		   String recieverMail=smail;
 		   String otpp=otp;
@@ -55,7 +55,10 @@ public class OtpMail {
 	      catch (MessagingException mex) 
 	      {
 	         mex.printStackTrace();
+	         return false;
 	      }
+	      
+	      return true;
 	   }
 
 }

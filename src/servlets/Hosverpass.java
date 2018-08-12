@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -18,6 +19,7 @@ import utility.OtpMail;
 public class Hosverpass extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 try {
+			 PrintWriter out=response.getWriter();
 			 String name="";
 			 String mail="";
 			 String nm=(String)request.getParameter("uname");
@@ -35,10 +37,16 @@ public class Hosverpass extends HttpServlet {
 				 String otp=new String(GenOtp.genOtp());
 				 System.out.println(otp);
 				 HttpSession sess=request.getSession();
-				 OtpMail.send(mail, otp);
+				 if(OtpMail.send(mail, otp)) {
 				 sess.setAttribute("user",nm);
 				 sess.setAttribute("OTP",otp);
 				 response.sendRedirect("hosotppass.jsp");
+				 }else {
+					 out.println("<html>");
+						out.println("<center><h3>couldn't send OTP, Server Down or internet connection lost!</h3></center>");
+						out.println("<center><a href=\"hosforgpass.jsp\">Go Back!</a><center>");
+						out.println("</html>");
+				 }
 			 }else {
 				 response.sendRedirect("hosforgpass.jsp");
 			 }

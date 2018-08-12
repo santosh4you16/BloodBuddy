@@ -15,7 +15,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="javascript/user_reg_val.js"></script>
 <%@ include file="hosheader.jsp" %>
+<%@ page errorPage="errorpage.jsp" %>
 </head>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <div class="well">
 <center><h4>Edit <%=session.getAttribute("SessName") %></h4></center>
 </div>

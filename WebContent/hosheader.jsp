@@ -48,12 +48,17 @@ z-index:1
 	
 	<!-- Logo -->
 	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#exp">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
 		<a href="hosprofile.jsp" class="navbar-brand"><%=((String)session.getAttribute("SessName")).toUpperCase()%></a>
 	</div>
 	
 	<!-- menu items -->
 	
-	<div>
+	<div class="collapse navbar-collapse" id="exp">
 		<ul class="nav navbar-nav">
 			<li><a href="Hosprofiledetail">MyProfile</a></li>
 			

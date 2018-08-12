@@ -15,15 +15,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="javascript/user_reg_val.js"></script>
 <%@ include file="userheader.jsp" %>
+<%@ page errorPage="errorpage.jsp" %>
 </head>
 <div class="well">
 <center><h4>Edit <%=session.getAttribute("SessName") %></h4></center>
 </div>
 <body>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <hr>
 	<div id="wid" class="container">
 	<fieldset>
-	<legend>Chnage Password</legend>
+	<legend>Change Password</legend>
 	<form action="Userpasschange" onsubmit="return validateForm()" method="get">
 	
 		<div class="form-group">

@@ -14,9 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%@ include file="userheader.jsp" %>
-
+<%@ page errorPage="errorpage.jsp" %>
 </head>
-
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 
 <script  >
 function addVal(){

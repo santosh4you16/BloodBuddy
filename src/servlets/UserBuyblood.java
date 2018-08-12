@@ -3,6 +3,8 @@ package servlets;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +16,8 @@ import javax.servlet.http.HttpSession;
 public class UserBuyblood extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
 		try {
 			HttpSession sess=request.getSession();
 			String uname=(String)sess.getAttribute("SessName");
@@ -24,20 +28,30 @@ public class UserBuyblood extends HttpServlet {
 			String hsname=(String)sess.getAttribute("hosname");
 			System.out.println(hsname);
 			Connection c=ConnectionProvider.connect();
-			PreparedStatement stmt=c.prepareStatement("update user_buy_blood set bloodg=?, bags=?, cost=?, hosname=?  where username=?");
-			stmt.setString(1,bg);
-			stmt.setInt(2,bag);
-			stmt.setInt(3,cost);
-			stmt.setString(4,hsname);
-			stmt.setString(5,uname);
-			stmt.executeUpdate();
-			PreparedStatement stmt1=c.prepareStatement("update blood set "+bg+"="+bg+"-"+bag+" where hos_name=?");
-			stmt1.setString(1,hsname);
-			stmt1.executeUpdate();
-			
-			request.getRequestDispatcher("userbuysucc.jsp").forward(request,response);
-			
-			
+			Statement st=c.createStatement();
+			ResultSet rs=st.executeQuery("select hos_name,"+bg+" from blood where hos_name='"+hsname+"'");
+			while(rs.next()) {
+				int bgp=rs.getInt(bg);
+				if((bgp-bag)<0) {
+					response.sendRedirect("userviewblood.jsp");
+				}else {
+					c.setAutoCommit(false);
+					PreparedStatement stmt1=c.prepareStatement("update blood set "+bg+"="+bg+"-"+bag+" where hos_name=?");
+					stmt1.setString(1,hsname);
+					stmt1.executeUpdate();		
+					
+					PreparedStatement stmt=c.prepareStatement("update user_buy_blood set bloodg=?, bags=?, cost=?, hosname=?  where username=?");
+					stmt.setString(1,bg);
+					stmt.setInt(2,bag);
+					stmt.setInt(3,cost);
+					stmt.setString(4,hsname);
+					stmt.setString(5,uname);
+					stmt.executeUpdate();
+					c.commit();
+					request.getRequestDispatcher("userbuysucc.jsp").forward(request,response);
+
+				}
+			}
 			
 		}catch(Exception e) {
 			System.out.println(e);

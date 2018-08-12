@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Successfully Registered!</title>
+<title>Contact Us</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- Latest compiled and minified CSS -->
@@ -15,24 +15,24 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="CSS/style.css"/>
-<%@ include file="userheader.jsp" %>
-<%@ page errorPage="errorpage.jsp" %>
-<%
-response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-response.setHeader("Pragma", "no-cache");
-response.setHeader("Expires", "0");
-%>
+<%@ include file="header.jsp" %>
 </head>
 <body>
-<div id="#prono" class="well" >
-<center><h4>Your Phone number and details are successfully sent to <%=(String)session.getAttribute("reciever")%> !</h4></center>
-			
-<center>
-<a href="userprofile.jsp" class="btn btn-success">Go Back</a>
-
-</center>
-
+<div class="well">
+<center><h2 style="text-shadow:2px 2px 2px grey;">Send Us your feedback</h2></center>
+<div class="container">
+<form action="Contactus">
+	<div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" placeholder="Enter name" class="form-control" id="name" name="name">
+		</div>
+		<div class="form-group">
+		<label for="message">Enter Your Message Here:</label><br>
+		<textarea class="form-control rounded-0" rows="10" placeholder="Enter Message:" id="message" name="msg"></textarea><br>
+		<input type="submit" class="btn btn-danger btn-block" value="Send"></input>
+		
+</form>
+</div>
 </div>
 </body>
 <%@ include file="footer.jsp" %>

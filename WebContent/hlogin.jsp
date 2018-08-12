@@ -15,6 +15,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%@ include file="header.jsp" %>
 </head>
+<script type="text/javascript">
+function preBack(){
+	window.history.forward();
+}
+setTimeout("preBack()","0");
+window.onunload=function(){null}
+</script>
 <link rel="stylesheet" href="CSS/style.css"/>
 <body>
 <div id="prono">
